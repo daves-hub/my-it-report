@@ -1,0 +1,181 @@
+\documentclass[12pt,a4paper]{report}
+
+% Font configuration - Times New Roman
+\usepackage{mathptmx} % Times font for text and math
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Page layout
+\usepackage[a4paper, margin=1in]{geometry}
+
+% Essential packages
+\usepackage{graphicx} % For including images
+\usepackage{hyperref} % For hyperlinks
+\usepackage{setspace} % For line spacing
+\usepackage{titlesec} % For customizing section titles
+\usepackage{tocloft} % For table of contents customization
+\usepackage{fancyhdr} % For headers and footers
+
+% Line spacing (1.5 is common for reports)
+\onehalfspacing
+
+% Header and footer configuration
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Title formatting
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={SIWES IT Report},
+    pdfpagemode=FullScreen,
+}
+
+% Document information
+\title{Students Industrial Work Experience Scheme (SIWES)\\
+\large IT Report}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+% Title page
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\huge\bfseries Students Industrial Work Experience Scheme (SIWES)\par}
+    \vspace{1cm}
+    {\Large IT Report\par}
+    \vspace{2cm}
+    
+    {\Large\itshape Your Name\par}
+    \vspace{1cm}
+    
+    {\large Matriculation Number: Your Matric No.\par}
+    \vspace{0.5cm}
+    {\large Department: Your Department\par}
+    \vspace{0.5cm}
+    {\large Faculty: Your Faculty\par}
+    \vspace{0.5cm}
+    {\large Institution: Your Institution\par}
+    \vspace{2cm}
+    
+    {\large Company/Organization: Company Name\par}
+    \vspace{0.5cm}
+    {\large Duration: Start Date -- End Date\par}
+    \vspace{2cm}
+    
+    {\large \today\par}
+\end{titlepage}
+
+% Declaration page
+\chapter*{Declaration}
+\addcontentsline{toc}{chapter}{Declaration}
+I hereby declare that this report is based on my original work during the Students Industrial Work Experience Scheme (SIWES) program. All sources of information have been duly acknowledged.
+
+\vspace{2cm}
+\noindent\makebox[2.5in]{\hrulefill}\\
+Signature \hspace{2cm} Date
+
+% Abstract
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+This report presents a comprehensive account of the industrial training experience undertaken during the Students Industrial Work Experience Scheme (SIWES). The report covers the activities, skills acquired, challenges encountered, and lessons learned during the training period.
+
+% Acknowledgements
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+I would like to express my sincere gratitude to all those who contributed to the successful completion of my industrial training program. Special thanks to my supervisors, colleagues, and family for their support and guidance throughout this period.
+
+% Table of contents
+\tableofcontents
+\newpage
+
+% List of figures (if needed)
+% \listoffigures
+% \newpage
+
+% List of tables (if needed)
+% \listoftables
+% \newpage
+
+% Main content
+\chapter{Introduction}
+\section{Background}
+Write your introduction here. The Students Industrial Work Experience Scheme (SIWES) is a skills training program designed to expose and prepare students for the industrial work situation they are likely to meet after graduation.
+
+\section{Objectives}
+The main objectives of the industrial training include:
+\begin{itemize}
+    \item To provide practical experience in a real work environment
+    \item To bridge the gap between theory and practice
+    \item To develop professional skills and competencies
+    \item To prepare students for the job market
+\end{itemize}
+
+\section{Company Profile}
+Provide information about the company/organization where you underwent the training.
+
+\chapter{Activities and Tasks}
+\section{Overview of Activities}
+Describe the various activities and tasks you performed during the training period.
+
+\section{Weekly/Monthly Breakdown}
+Provide a detailed breakdown of your activities.
+
+\subsection{Week 1-4}
+Describe activities for this period.
+
+\subsection{Week 5-8}
+Describe activities for this period.
+
+\chapter{Skills Acquired}
+\section{Technical Skills}
+List and describe the technical skills you acquired during the training.
+
+\section{Soft Skills}
+Discuss the soft skills developed, such as communication, teamwork, and time management.
+
+\chapter{Challenges and Solutions}
+\section{Challenges Encountered}
+Describe the challenges you faced during the training period.
+
+\section{Solutions Implemented}
+Explain how you addressed these challenges.
+
+\chapter{Conclusion and Recommendations}
+\section{Conclusion}
+Summarize your overall experience and key takeaways from the industrial training.
+
+\section{Recommendations}
+Provide recommendations for future improvements to the training program or suggestions for the company.
+
+% References (if needed)
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{References}
+
+\bibitem{example}
+Author Name, \textit{Title of Work}, Publisher, Year.
+
+\end{thebibliography}
+
+% Appendices (if needed)
+\appendix
+\chapter{Additional Documents}
+Include any additional documents, certificates, or supplementary materials here.
+
+\end{document}
