@@ -123,8 +123,127 @@ Common LaTeX features used included sectioning and subsectioning, page numbering
 
 Litashub adopted LaTeX for academic documents because it produced clean, professional, and standardized outputs. The system was especially useful for project reports submitted by university students, ensuring consistency with institutional requirements.
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth]{images/latex_editor.png}
+\caption{LaTeX editor workspace showing document preparation}
+\label{fig:latex_editor}
+\end{figure}
+
 \subsection{Projects}
-% TODO: Add specific LaTeX typesetting project descriptions
+
+\subsubsection{Ph.D Assignment - History and International Studies}
+
+A Ph.D student from the History and International Studies department required assistance with typing an academic assignment for submission.
+
+Activities performed included typing a multi-page academic assignment based on handwritten or draft manuscript, applying proper academic formatting including title page, section headings, and page numbering, adding footnotes for references and additional commentary as required in humanities disciplines, and preparing a bibliography section with proper citation formatting.
+
+Tools and features used included basic LaTeX document structure (\texttt{\textbackslash documentclass}, \texttt{\textbackslash begin\{document\}}, sectioning commands), the \texttt{\textbackslash footnote\{\}} command for creating footnotes throughout the document, bibliography management for listing references, and page numbering and header customization.
+
+Understanding academic citation format for humanities proved challenging, as it differs significantly from Computer Science citation styles. Humanities papers typically require extensive footnotes rather than inline citations. Additionally, managing the large number of footnotes and ensuring they appeared on correct pages required careful attention.
+
+The student was satisfied with the professionally formatted document. The assignment met departmental standards for presentation and formatting, and the clean, academic appearance enhanced the overall submission quality.
+
+\subsubsection{Legal Document for Court Submission}
+
+A client required a formal legal document to be prepared for official court submission. Legal documents demand extremely high standards of accuracy and formatting.
+
+Activities performed included typing the legal document from the client's draft with precise attention to detail, applying formal legal document formatting with proper headings and structure, implementing numbered clauses using enumerate environments for clear organization, and ensuring proper page numbering and formal language structure throughout.
+
+Tools and features used included LaTeX sectioning commands for organizing document structure, the \texttt{enumerate} environment for creating numbered clauses and sub-clauses, custom page numbering to match legal document requirements, and precise margin and spacing control using the geometry package.
+
+Maintaining strict formal formatting requirements was challenging, as legal documents have rigid conventions. Ensuring absolutely zero errors was critical, as legal documents have zero tolerance for mistakes that could affect interpretation or legal standing. Every word, number, and punctuation mark required verification.
+
+The document was accepted by the court without any formatting issues. The client appreciated the professional presentation and accuracy, which reflected positively on their case preparation. The formal LaTeX output provided the authoritative appearance expected in legal contexts.
+
+\subsubsection{Secondary School Mathematics Exam Questions}
+
+A secondary school teacher requested preparation of a mathematics examination question paper for student assessment.
+
+Activities performed included typing the mathematics examination with multiple question types, formatting equations, fractions, and geometric symbols using mathematical LaTeX syntax, applying proper question numbering and section organization, and ensuring clear presentation suitable for examination context.
+
+Tools and features used included the \texttt{amsmath} package for mathematical equation formatting, the \texttt{\textbackslash frac\{\}\{\}} command for creating fractions, mathematical symbols and operators from LaTeX math mode, and proper exam formatting with clear question structure.
+
+Learning mathematical notation in LaTeX on the spot presented difficulties. Understanding the syntax for fractions, exponents, subscripts, and special mathematical symbols required quick learning and reference to documentation. Getting symbols to appear correctly and ensuring proper spacing in equations demanded careful attention.
+
+The teacher was impressed with the clean, professional exam paper layout. The mathematical notation was clear and properly formatted, making the questions easy for students to read and understand. The professional appearance elevated the quality of the examination materials.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/latex_mathematics.png}
+\caption{Mathematical equations formatted in LaTeX}
+\label{fig:latex_mathematics}
+\end{figure}
+
+\subsubsection{Personal Experimentation with Mathematical Equations}
+
+This was a self-directed learning initiative undertaken to improve LaTeX mathematical typesetting skills in preparation for future mathematics-heavy projects.
+
+Activities performed included practicing formatting complex mathematical equations including multi-line derivations, experimenting with matrices using matrix environments, typing summations, integrals, and limits using proper LaTeX commands, and creating algebraic expressions with proper spacing and notation.
+
+Tools and features used included the \texttt{amsmath} package for advanced mathematical typesetting, the \texttt{amssymb} package for additional mathematical symbols, equation environments (\texttt{equation}, \texttt{align}, \texttt{gather}) for different formatting needs, commands like \texttt{\textbackslash sum}, \texttt{\textbackslash int}, \texttt{\textbackslash lim} for summation, integration, and limits, and matrix environments for creating mathematical matrices.
+
+Understanding LaTeX syntax for complex mathematical structures was initially difficult. Learning the proper commands for different mathematical operations, understanding how to control spacing, and mastering the use of different equation environments required dedicated practice and experimentation.
+
+Gained significant confidence in handling mathematical documents through systematic practice. This preparation proved valuable for future math-heavy projects, reducing the learning curve when handling actual client work involving mathematical content.
+
+\subsubsection{Student Project Report Formatting}
+
+A university student required a project report to be formatted according to strict institutional requirements for academic submission.
+
+Activities performed included formatting existing report content into proper academic structure, creating a professional title page with institutional information, generating an automatic table of contents, organizing content into chapters, sections, and subsections, and implementing proper page numbering with different styles for preliminary pages and main content.
+
+Tools and features used included \texttt{\textbackslash chapter\{\}} and \texttt{\textbackslash section\{\}} commands for document structure, \texttt{\textbackslash tableofcontents} for automatic table of contents generation, \texttt{\textbackslash maketitle} for creating formatted title page, page numbering customization (Roman numerals for preliminary pages, Arabic for main content), and the geometry package for margin and spacing control.
+
+Ensuring the format matched university guidelines exactly was challenging. Requirements included specific margins, spacing, font sizes, and page numbering schemes. Careful attention to detail was required to verify every formatting element matched institutional standards.
+
+The student's report passed formatting review without corrections on the first submission. The professional presentation enhanced the overall quality of the work. The student became a repeat customer, requesting assistance with subsequent academic documents.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{images/latex_output_sample.png}
+\caption{Sample formatted academic document output}
+\label{fig:latex_output_sample}
+\end{figure}
+
+\subsubsection{Church Program Bulletin}
+
+A church or religious organization required a printed program document for a special event or regular service bulletin.
+
+Activities performed included typing a multi-column program layout for easy reading, formatting headers for different program sections, organizing event schedules with proper time and activity alignment, and adding announcements and informational sections.
+
+Tools and features used included the \texttt{multicol} package for creating multiple column layouts, custom header formatting for section titles, text alignment commands for organizing information, and font sizing and styling for emphasis and hierarchy.
+
+Balancing aesthetic appeal with information density in limited space was challenging. Church programs typically need to fit on one or two pages while containing substantial information. Ensuring the layout was both attractive and functional required careful design decisions and effective use of spacing.
+
+Delivered a clean, readable program that was easy to print and distribute. The professional appearance reflected well on the organization, and the layout made information easily accessible to attendees. The document successfully served its purpose during the event.
+
+\begin{table}[h]
+\centering
+\caption{Common LaTeX packages utilized during typesetting activities}
+\label{tab:latex_packages}
+\begin{tabular}{|l|p{6cm}|l|}
+\hline
+\textbf{Package} & \textbf{Purpose} & \textbf{Frequency} \\
+\hline
+amsmath & Mathematical equations and expressions & High \\
+\hline
+amssymb & Additional mathematical symbols & Medium \\
+\hline
+graphicx & Including images and figures & Medium \\
+\hline
+hyperref & Creating hyperlinks in PDFs & High \\
+\hline
+geometry & Page layout and margin control & High \\
+\hline
+multicol & Multi-column layouts & Low \\
+\hline
+enumerate & Numbered lists and clauses & Medium \\
+\hline
+biblatex & Bibliography management & Medium \\
+\hline
+\end{tabular}
+\end{table}
 
 \section{Customer Interaction and Service}
 Customer interaction formed a major aspect of daily activities at Litashub Cyber Cafe. The intern interacted directly with customers, receiving requests, clarifying requirements, and providing assistance related to typing, printing, design, and document preparation services.
@@ -145,28 +264,3 @@ Routine tasks included printing documents, reloading paper trays, adjusting prin
 Activities followed a general weekly structure, typically from Monday to Friday, with occasional variations based on workload and customer demand. Each workday involved a mix of customer service, document preparation, design tasks, and equipment operation.
 
 Early in the training, emphasis was on observation and guided assistance to understand workplace procedures and tools. As the training progressed, greater responsibility was taken in handling customer requests independently, performing UI/UX design tasks, preparing LaTeX documents, and managing printing operations.
-
-% Project sections reserved for specific project descriptions
-\section{Project Six}
-% TODO: Add project description
-
-\section{Project Seven}
-% TODO: Add project description
-
-\section{Project Eight}
-% TODO: Add project description
-
-\section{Project Nine}
-% TODO: Add project description
-
-\section{Project Ten}
-% TODO: Add project description
-
-\section{Project Eleven}
-% TODO: Add project description
-
-\section{Project Twelve}
-% TODO: Add project description
-
-\section{Project Thirteen}
-% TODO: Add project description
