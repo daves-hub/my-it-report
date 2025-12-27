@@ -15,7 +15,14 @@
 \usepackage{titlesec} % For customizing section titles
 \usepackage{tocloft} % For table of contents customization
 \usepackage{fancyhdr} % For headers and footers
+\usepackage{microtype} % For better typography
+\usepackage{xcolor}
+\usepackage{listings}
 
+\lstset{
+    breaklines=true,
+    breakatwhitespace=true
+}
 % Line spacing (1.5 is common for reports)
 \onehalfspacing
 
@@ -50,7 +57,7 @@
 % Document information
 \title{Students Industrial Work Experience Scheme (SIWES)\\
 \large IT Report}
-\author{Your Name}
+\author{Ighalo Genesis Osasenaga}
 \date{\today}
 
 \begin{document}
@@ -81,32 +88,19 @@ I would like to express my sincere gratitude to all those who contributed to the
 \tableofcontents
 \newpage
 
-% List of figures (if needed)
-% \listoffigures
-% \newpage
+% List of figures and tables
+\input{list_of_tables_and_figures}
+\newpage
 
-% List of tables (if needed)
-% \listoftables
-% \newpage
+% Abbreviations and keywords
+\input{abbreviations}
+\newpage
 
 % Main content
 \input{chapter1}
 \input{chapter2}
 \input{chapter3}
-
-\chapter{Challenges and Solutions}
-\section{Challenges Encountered}
-Describe the challenges you faced during the training period.
-
-\section{Solutions Implemented}
-Explain how you addressed these challenges.
-
-\chapter{Conclusion and Recommendations}
-\section{Conclusion}
-Summarize your overall experience and key takeaways from the industrial training.
-
-\section{Recommendations}
-Provide recommendations for future improvements to the training program or suggestions for the company.
+\input{chapter4}
 
 % References (if needed)
 \begin{thebibliography}{99}
