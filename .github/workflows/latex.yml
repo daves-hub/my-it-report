@@ -17,22 +17,15 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # 2. Install TeX Live with caching
-      # Using 'teatimeguest/setup-texlive-action' allows for caching of the TeX installation,
-      # satisfying the requirement to "Cache LaTeX dependencies for faster builds".
-      # 'scheme-full' ensures all common packages are available, which is safer for academic reports.
-      - name: Setup TeX Live
-        uses: teatimeguest/setup-texlive-action@v3
-        with:
-          cache: true
-          packages: >
-            scheme-full
-            latexmk
-
-      # 3. Compile the LaTeX document
-      # Uses latexmk, which automatically handles dependencies and multiple runs (bibtex, etc.)
+      # 2. Compile LaTeX Document
+      # Uses xu-cheng/latex-action, which runs in a pre-configured Docker container
+      # This provides a stable environment with all dependencies pre-installed (faster than installing from scratch).
       - name: Compile LaTeX Document
-        run: latexmk -pdf -file-line-error -halt-on-error -interaction=nonstopmode report.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: report.tex
+          # standard latexmk args are used by default: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
+
 
       # 4. Generate a Release Tag
       # Generates a tag based on the run number, e.g., v1.0.42
