@@ -1,66 +1,41 @@
-# my-it-report
-My SIWES IT Report
+# SIWES Industrial Training Report
+## Internship at Litashub Cyber Cafe
 
-## LaTeX Template
+This repository contains the LaTeX source code for the technical report submitted in partial fulfillment of the requirements for the **Student Industrial Work Experience Scheme (SIWES)**.
 
-This repository contains a LaTeX template for creating a professional SIWES (Students Industrial Work Experience Scheme) IT report.
+The report details the experiences, skills acquired, and projects completed during a 4-month industrial training at **Litashub Cyber Cafe** in Benin City, Edo State.
 
-### Template Specifications
+### 📄 Report Overview
 
-- **Page Size**: A4
-- **Body Font Size**: 12pt
-- **Font Family**: Times New Roman
-- **Document Class**: report
+The document covers three meaningful areas of professional development:
+1.  **UI/UX Design**: Practical application of **Figma** for designing vector graphics, invitation cards, landing pages (Litas Travels), and mobile app prototypes (Attendance System).
+2.  **Professional Typesetting**: extensive use of **LaTeX** for preparing academic papers, legal documents, and mathematical manuscripts with high precision.
+3.  **Office Operations**: Hands-on experience with hardware maintenance (HP LaserJet printers), troubleshooting, and customer service management.
 
-### Prerequisites
+### 📂 Repository Structure
 
-To compile this LaTeX document, you need:
-- A LaTeX distribution (e.g., TeX Live, MiKTeX, or MacTeX)
-- Or use an online LaTeX editor like Overleaf
+*   `report.tex`: The main LaTeX file that orchestrates the document structure.
+*   `abstract.tex`: Executive summary of the training experience.
+*   `chapter1.tex`: Introduction to SIWES and history of Litashub Cyber Cafe.
+*   `chapter2.tex`: Detailed account of daily activities and specific projects.
+*   `chapter3.tex`: Analysis of skills gained, tools used, and challenges overcome.
+*   `chapter4.tex`: Conclusion, limitations, and recommendations.
+*   `images/`: Directory containing screenshots and photos used in the report.
 
-### Compilation
+### 🚀 How to Compile
 
-To compile the document to PDF:
+To generate the PDF report, you need a standard TeX distribution installed (e.g., TeX Live, MiKTeX, or MacTeX).
+
+Run the following command in your terminal:
 
 ```bash
 pdflatex report.tex
-pdflatex report.tex  # Run twice to generate table of contents
 ```
 
-Or use latexmk for automated compilation:
+*Note: You may need to run the command twice to ensure the Table of Contents and internal references are correctly resolved.*
 
-```bash
-latexmk -pdf report.tex
-```
+### ✍️ Author
 
-### Template Structure
-
-The template includes:
-- Title page with customizable fields
-- Declaration page
-- Abstract
-- Acknowledgements
-- Table of contents
-- Introduction chapter
-- Activities and Tasks chapter
-- Skills Acquired chapter
-- Challenges and Solutions chapter
-- Conclusion and Recommendations chapter
-- References section
-- Appendices
-
-### Customization
-
-Edit the following sections in `report.tex`:
-1. Title page: Update your name, matriculation number, department, institution, and company details
-2. Main chapters: Replace placeholder text with your actual content
-3. References: Add your references in the bibliography section
-
-### Features
-
-- Professional formatting with Times New Roman font
-- 1.5 line spacing for readability
-- Fancy headers and footers
-- Hyperlinked table of contents
-- Customizable chapter and section titles
-- Ready-to-use structure for IT reports
+**Ighalo Genesis Osasenaga**
+*Department of Computer Science*
+*University of Benin, Edo State*
