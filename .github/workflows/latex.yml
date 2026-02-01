@@ -1,0 +1,54 @@
+name: Build and Release LaTeX Report
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required for creating releases
+
+    steps:
+      # 1. Checkout the repository code
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Install TeX Live with caching
+      # Using 'teatimeguest/setup-texlive-action' allows for caching of the TeX installation,
+      # satisfying the requirement to "Cache LaTeX dependencies for faster builds".
+      # 'scheme-full' ensures all common packages are available, which is safer for academic reports.
+      - name: Setup TeX Live
+        uses: teatimeguest/setup-texlive-action@v3
+        with:
+          cache: true
+          packages: >
+            scheme-full
+            latexmk
+
+      # 3. Compile the LaTeX document
+      # Uses latexmk, which automatically handles dependencies and multiple runs (bibtex, etc.)
+      - name: Compile LaTeX Document
+        run: latexmk -pdf -file-line-error -halt-on-error -interaction=nonstopmode report.tex
+
+      # 4. Generate a Release Tag
+      # Generates a tag based on the run number, e.g., v1.0.42
+      - name: Generate Release Tag
+        id: tag
+        run: echo "release_tag=v1.0.${{ github.run_number }}" >> $GITHUB_OUTPUT
+
+      # 5. Create GitHub Release and Upload Asset
+      # Automatically creates a release if it doesn't exist and uploads the PDF.
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.tag.outputs.release_tag }}
+          name: Release ${{ steps.tag.outputs.release_tag }}
+          draft: false
+          prerelease: false
+          files: report.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
