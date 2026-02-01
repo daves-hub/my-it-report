@@ -15,7 +15,7 @@
 \usepackage{titlesec} % For customizing section titles
 \usepackage{tocloft} % For table of contents customization
 \usepackage{fancyhdr} % For headers and footers
-\usepackage{microtype} % For better typography
+\usepackage[nopatch=footnote]{microtype} % For better typography
 \usepackage{xcolor}
 \usepackage{listings}
 
@@ -66,23 +66,62 @@
 \input{titlepage}
 
 % Declaration page
-\chapter*{Declaration}
-\addcontentsline{toc}{chapter}{Declaration}
-I hereby declare that this report is based on my original work during the Students Industrial Work Experience Scheme (SIWES) program. All sources of information have been duly acknowledged.
-
-\vspace{2cm}
-\noindent\makebox[2.5in]{\hrulefill}\\
-Signature \hspace{2cm} Date
+\chapter*{Dedication}
+\addcontentsline{toc}{chapter}{Dedication}
+I dedicate this report to Jehovah, who lead me through a successful IT journey, to my family who have supported me throughout this journey, and friends who have encouraged me and made my experience enjoyable.
 
 % Abstract
-\chapter*{Abstract}
-\addcontentsline{toc}{chapter}{Abstract}
-This report presents a comprehensive account of the industrial training experience undertaken during the Students Industrial Work Experience Scheme (SIWES). The report covers the activities, skills acquired, challenges encountered, and lessons learned during the training period.
+\chapter*{Letter of Certification}
+\addcontentsline{toc}{chapter}{Letter of Certification}
+This is to certify that this report put together by \textbf{IGHALO GENESIS OSASENAGA} with Matriculation number \textbf{PSC2202134} of the Department of Computer Science, University of Benin, Edo, has successfully completed his four (4) months Student Industrial Work Experience Scheme (S.I.W.E.S)  at Litas Hub, Shop 12, Maingate Shopping Complex, University of Benin, Edo state.
+
+\vspace{4cm}
+
+\noindent
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \rule{6cm}{1pt}\\
+    \textbf{IGHALO GENESIS OSASENAGA}\\
+    (Student)\\
+    \vspace{0.5cm}
+    Date: \rule{3cm}{1pt}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \rule{6cm}{1pt}\\
+    \textbf{Mr. Julius Osunde}\\
+    (Institution Based Supervisor)\\
+    \vspace{0.5cm}
+    Date: \rule{3cm}{1pt}
+\end{minipage}
+
+\vspace{3cm}
+
+\noindent
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \rule{6cm}{1pt}\\
+    \textbf{Dr. D. N. Idehen}\\
+    (Department Based Supervisor)\\
+    \vspace{0.5cm}
+    Date: \rule{3cm}{1pt}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    \centering
+    \rule{6cm}{1pt}\\
+    \textbf{Dr. (Mrs) A. R. Usiobaifo}\\
+    (Head of Department)\\
+    \vspace{0.5cm}
+    Date: \rule{3cm}{1pt}
+\end{minipage}
 
 % Acknowledgements
 \chapter*{Acknowledgements}
 \addcontentsline{toc}{chapter}{Acknowledgements}
 I would like to express my sincere gratitude to all those who contributed to the successful completion of my industrial training program. Special thanks to my supervisors, colleagues, and family for their support and guidance throughout this period.
+\newpage
 
 % Table of contents
 \tableofcontents
@@ -101,19 +140,5 @@ I would like to express my sincere gratitude to all those who contributed to the
 \input{chapter2}
 \input{chapter3}
 \input{chapter4}
-
-% References (if needed)
-\begin{thebibliography}{99}
-\addcontentsline{toc}{chapter}{References}
-
-\bibitem{example}
-Author Name, \textit{Title of Work}, Publisher, Year.
-
-\end{thebibliography}
-
-% Appendices (if needed)
-\appendix
-\chapter{Additional Documents}
-Include any additional documents, certificates, or supplementary materials here.
 
 \end{document}
