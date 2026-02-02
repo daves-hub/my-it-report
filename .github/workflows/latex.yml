@@ -2,54 +2,48 @@ name: Build and Release LaTeX Report
 
 on:
   push:
-    branches:
-      - main
-  workflow_dispatch: # Allows manual triggering of the workflow
+    tags:
+      - "v*"        # Only run when you push a version tag (e.g. v1.0)
+  workflow_dispatch: # Allow manual runs if needed
+
+permissions:
+  contents: write    # Needed for GitHub Releases
 
 jobs:
   build_latex:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write # Required for creating releases
 
     steps:
-      # 1. Checkout the repository code
+      # 1. Checkout repository
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # 2. Install TeX Live with caching
-      # Uses TeX-Live/setup-texlive-action (successor to teatimeguest) to natively install and cache TeX Live.
-      # This avoids pulling the large Docker image on every run and uses GitHub's cache to speed up installs.
+      # 2. Setup TeX Live (lean + cached)
       - name: Setup TeX Live
         uses: TeX-Live/setup-texlive-action@v3
         with:
           cache: true
-          # scheme-full is large; for faster cached builds, we can stick to full or a smaller scheme.
-          # We'll use full to be safe, but caching will make subsequent runs fast.
           packages: >
-            scheme-full
+            scheme-medium
             latexmk
+            geometry
+            graphicx
+            hyperref
+            setspace
 
-      # 3. Compile LaTeX Document
-      - name: Compile LaTeX Document
-        run: latexmk -pdf -file-line-error -halt-on-error -interaction=nonstopmode report.tex
+      # 3. Compile LaTeX document
+      - name: Compile LaTeX
+        run: |
+          latexmk -pdf \
+            -file-line-error \
+            -halt-on-error \
+            -interaction=nonstopmode \
+            report.tex
 
-
-      # 4. Generate a Release Tag
-      # Generates a tag based on the run number, e.g., v1.0.42
-      - name: Generate Release Tag
-        id: tag
-        run: echo "release_tag=v1.0.${{ github.run_number }}" >> $GITHUB_OUTPUT
-
-      # 5. Create GitHub Release and Upload Asset
-      # Automatically creates a release if it doesn't exist and uploads the PDF.
-      - name: Create Release
+      # 4. Upload PDF to GitHub Release
+      - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.tag.outputs.release_tag }}
-          name: Release ${{ steps.tag.outputs.release_tag }}
-          draft: false
-          prerelease: false
           files: report.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
