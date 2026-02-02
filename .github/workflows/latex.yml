@@ -30,6 +30,12 @@ jobs:
             graphicx
             hyperref
             setspace
+            titlesec
+            tocloft
+            fancyhdr
+            microtype
+            xcolor
+            listings
 
       # 3. Compile LaTeX document
       - name: Compile LaTeX
